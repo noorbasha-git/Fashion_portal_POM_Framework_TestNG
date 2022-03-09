@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="smoketest" parallel="tests">
+<listeners>
+<listener class-name="com.mystore.utilities.Listener"></listener>
+</listeners>
+  <test name="chromebrowser">
+  <parameter name="browser" value="chrome"></parameter>
+  <groups>
+  <run>
+  <include name="sanity"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="com.mystore.testcases.LoginTest"/>
+      <class name="com.mystore.testcases.AccountCreationTest"/>
+      <class name="com.mystore.testcases.HomePageTest"/>
+      <class name="com.mystore.testcases.AddTocartTest"/>
+      <class name="com.mystore.testcases.SearchResultTest"/>
+      <class name="com.mystore.testcases.Indexpagetest"/>
+      <class name="com.mystore.testcases.OrderPageTest"/>
+      <class name="com.mystore.testcases.EndToEnd"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="edgebrowser">
+  <parameter name="browser" value="edge"></parameter>
+  <groups>
+  <run>
+  <include name="sanity"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="com.mystore.testcases.LoginTest"/>
+      <class name="com.mystore.testcases.AccountCreationTest"/>
+      <class name="com.mystore.testcases.HomePageTest"/>
+      <class name="com.mystore.testcases.AddTocartTest"/>
+      <class name="com.mystore.testcases.SearchResultTest"/>
+      <class name="com.mystore.testcases.Indexpagetest"/>
+      <class name="com.mystore.testcases.OrderPageTest"/>
+      <class name="com.mystore.testcases.EndToEnd"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
