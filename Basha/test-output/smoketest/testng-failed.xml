@@ -14,6 +14,7 @@
     <classes>
       <class name="com.mystore.testcases.Indexpagetest">
         <methods>
+          <include name="verifytitle"/>
           <include name="setup"/>
           <include name="verifylogo"/>
           <include name="loadconfig"/>
@@ -23,23 +24,4 @@
       </class> <!-- com.mystore.testcases.Indexpagetest -->
     </classes>
   </test> <!-- edgebrowser(failed) -->
-  <test thread-count="5" parallel="tests" name="chromebrowser(failed)">
-    <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="sanity"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="com.mystore.testcases.Indexpagetest">
-        <methods>
-          <include name="setup"/>
-          <include name="verifylogo"/>
-          <include name="loadconfig"/>
-          <include name="endextent"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.mystore.testcases.Indexpagetest -->
-    </classes>
-  </test> <!-- chromebrowser(failed) -->
 </suite> <!-- Failed suite [smoketest] -->

@@ -25,8 +25,9 @@ public class Indexpagetest extends BaseClass {
 	
 	
 	@AfterMethod(groups={"smoke","sanity"})
-	public void teardown() {
+	public void teardown() throws InterruptedException {
 		Log.log.info("________________________closing browser");
+		Thread.sleep(1000);
 		driver.quit();
 	}
 	
@@ -35,7 +36,7 @@ public class Indexpagetest extends BaseClass {
 		//System.out.println()
 		Log.log.info("_________________________first test");
 		indpage=new IndexPage();
-		Assert.assertTrue(false);
+		Assert.assertTrue(indpage.validatelogo());
 	
 	}
 	@Test(groups={"smoke","sanity"})
